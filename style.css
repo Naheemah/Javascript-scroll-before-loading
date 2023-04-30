@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.upper {
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(pc.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.upper-text {
+    color: white;
+    margin: auto;
+    font-family: 'fantasy';
+    font-style: italic;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 0px;
+}
+
+.about-heading {
+    text-align: center;
+}
+
+.row {
+    padding: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.col {
+    flex-basis: 40%;
+}
+
+.accordion-heading {
+    text-align: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*body {
+    background: url("pc.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+    font-family: 'Roboto', sans-serif;
+}*/
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 600px;
+    background: rgba(0,0,0,0.7);
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    background: gray;
+    user-select: none;
+    font-weight: 700;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+#check {
+    display: none;
+    color: white;
+}
+
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    color: white;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+label #btn {
+    left: 40px;
+    top: 20px;
+    font-size: 25px;
+    color: white;
+    background: none;
+    padding: 0px 0px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 10px;
+    font-size: 27px;
+    color: #0a5257;
+    background: none;
+    padding: 0px 0px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+#check:checked ~ section {
+    margin-left: 250px;
+}
+
+section {
+    background: url("pc.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}
